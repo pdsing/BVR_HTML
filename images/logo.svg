@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="133" height="38" viewBox="0 0 133 38">
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#FFF" font-family="Rubik-Bold, Rubik" font-size="14" font-weight="bold">
+            <tspan x="56" y="16">Best Views</tspan> <tspan x="56" y="32">Reviews</tspan>
+        </text>
+        <path fill="#57A3F9" d="M11.215 12.23l5.167 4.822a.5.5 0 0 0 .34.135h8.135a1 1 0 1 0 0-1H16.92l-4.423-4.129.872-.116L18.821.568a1 1 0 0 1 1.804 0l5.451 11.374 12.502 1.67a1 1 0 0 1 .558 1.715l-9.133 8.7.973 5.309-5.509-3.086a.5.5 0 0 0-.244-.063h-7.634a1 1 0 1 0 0 1h7.503l6.119 3.426 1.067 5.82a1 1 0 0 1-1.46 1.06l-11.095-5.997-11.096 5.997a1 1 0 0 1-1.46-1.06l2.276-12.406-9.133-8.7a1 1 0 0 1 .558-1.715l10.347-1.382zm6.374 8.957a1 1 0 1 0 0 1h7.268a1 1 0 1 0 0-1h-7.268z" opacity=".998"/>
+    </g>
+</svg>
