@@ -1,0 +1,726 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+    <title>Product List</title>
+    <style>
+        .col,
+        .col-1,
+        .col-10,
+        .col-11,
+        .col-12,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            position: relative;
+            width: 100%;
+            padding: 0px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .row {
+            margin: 0px;
+        }
+        
+        .header {
+            height: 64px;
+            background-image: linear-gradient(74deg, #342e54, #054a91);
+            box-shadow: 0 8px 8px 0 rgba(28, 81, 142, 0.2);
+            opacity: 0.81;
+            background-size: cover;
+        }
+        
+        .logo {
+            width: 134px;
+            height: 38px;
+            object-fit: contain;
+        }
+        
+        .heading {
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.43;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin: 0px 16px;
+        }
+        
+        .nav-link:hover {
+            color: #ffffff;
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 1.0);
+        }
+        
+        .navbar-expand-sm .navbar-nav .nav-link {
+            padding-right: 0rem;
+            padding-left: 0rem;
+        }
+        
+        .Mask {
+            height: 256px;
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.02);
+            background-color: #ffffff;
+            margin-bottom: 48px;
+        }
+        
+        .path {
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #57a3f9;
+            padding: 28px 0px 47px 72px;
+        }
+        
+        .product-name {
+            font-family: Rubik;
+            font-size: 40px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #292c32;
+            margin: 0px 0px 41px 72px;
+            max-width: 676px;
+            display: inline-block;
+        }
+        
+        .divier-top {
+            width: 1136px;
+            height: 1px;
+            opacity: 0.3;
+            background-color: #d8d8d8;
+            position: relative;
+            bottom: 32px;
+            margin-left: 71px;
+        }
+        
+        .date {
+            opacity: 0.4;
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #292c32;
+            margin-bottom: 5px;
+        }
+        
+        .reviews-scanned {
+            font-family: Rubik;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #292c32;
+        }
+        
+        .bg-banner {
+            width: 379px;
+            height: 256px;
+            object-fit: contain;
+            position: absolute;
+            right: 0px;
+        }
+        
+        .main-content {
+            max-width: 944px;
+            height: 960px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.02);
+            background-color: #ffffff;
+            margin: 0px auto 72px auto;
+        }
+        
+        .introduction {
+            padding: 63px 0px 43px 128px;
+            max-width: 816px;
+            font-family: Rubik;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.44;
+            letter-spacing: normal;
+            color: #5e5e5e;
+            display: inline-block;
+        }
+        
+        .read-more {
+            font-family: Rubik;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.44;
+            letter-spacing: normal;
+            color: #57a3f9;
+            text-decoration: none;
+        }
+        
+        .read-more:hover {
+            text-decoration: none;
+            color: #57a3f9;
+            display: inline;
+        }
+        
+        .main-product {
+            height: 166px;
+            padding: 35px 0px;
+            border-bottom: 1px solid rgba(216, 216, 216, 0.3);
+        }
+        
+        .badge {
+            width: 72px;
+            height: 96px;
+            border-radius: 4px;
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.02), inset 0 -3px 0 0 #ffffff;
+            border: solid 1px #ebebeb;
+            background-color: #ffffff;
+            padding: 0px;
+            float: right;
+            margin-left: -37px;
+            margin-right: 50px;
+            margin-top: -7px;
+            position: relative;
+            top: 7px;
+            border-bottom: 2px solid #57a3f9;
+        }
+        
+        .badge-winner {
+            width: 51px;
+            height: 96px;
+            object-fit: contain;
+            position: relative;
+            top: -52px;
+        }
+        
+        .hash {
+            opacity: 0.3;
+            font-family: Rubik;
+            font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.2;
+            letter-spacing: normal;
+            color: #292c32;
+            position: absolute;
+            top: 23px;
+            left: 12px;
+        }
+        
+        .rank {
+            font-family: Rubik;
+            font-size: 24px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #292c32;
+            position: relative;
+            bottom: 66px;
+        }
+        
+        .winner {
+            height: 22px;
+            border-radius: 0px 0px 4px 4px;
+            background-color: #f6cf24;
+            width: 72px;
+            font-family: Rubik;
+            font-size: 11px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.24px;
+            text-align: center;
+            color: #292c32;
+            margin-left: -1px;
+            position: relative;
+            bottom: 51px;
+            padding-top: 4px;
+        }
+        
+        .best-value {
+            height: 22px;
+            border-radius: 0px 0px 4px 4px;
+            background-color: #57a3f9;
+            width: 72px;
+            font-family: Rubik;
+            font-size: 9px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #ffffff;
+            margin-left: -1px;
+            position: relative;
+            bottom: 51px;
+            padding-top: 6px;
+        }
+        
+        .product-img {
+            height: 96px;
+            width: 96px;
+            margin-right: 44px;
+        }
+        
+        .main-product-name {
+            font-family: Rubik;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: normal;
+            color: #57a3f9;
+            margin-top: 3px;
+            margin-bottom: 11px;
+            max-width: 400px;
+        }
+        
+        .main-product-description {
+            opacity: 0.5;
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #292c32;
+            max-width: 480px;
+        }
+        
+        .GaugeMeter {
+            position: Relative;
+            text-align: Center;
+            overflow: Hidden;
+            cursor: Default;
+            display: inline-block;
+            top: -3px;
+            left: 57px;
+        }
+        
+        .GaugeMeter SPAN {
+            width: 54%;
+            position: Absolute;
+            display: Inline-Block;
+            overflow: Hidden;
+            white-space: NoWrap;
+            text-overflow: Ellipsis;
+            margin: 0 23%;
+            font-family: Rubik;
+            font-size: 32px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: -0.8px;
+            text-align: center;
+            color: #292c32;
+        }
+        
+        .GaugeMeter B {
+            width: 54%;
+            position: Absolute;
+            display: Inline-Block;
+            overflow: Hidden;
+            white-space: NoWrap;
+            text-overflow: Ellipsis;
+            margin: 0 23%;
+            opacity: 0.4;
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: palevioletred;
+        }
+        
+        .GaugeMeter[data-style="Semi"] B {
+            width: 80%;
+            margin: 0 10%;
+        }
+        
+        .GaugeMeter S,
+        .GaugeMeter U {
+            text-decoration: None;
+            font-size: .60em;
+            font-weight: 200;
+            opacity: .6;
+        }
+        
+        .GaugeMeter B {
+            opacity: 0.4;
+            font-family: Rubik;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #292c32;
+        }
+        
+        .other-products {
+            font-family: Rubik;
+            font-size: 17px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: -0.09px;
+            color: #292c32;
+            height: 20px;
+            /* padding: 81px auto 69px auto; */
+            padding-top: 81px;
+            margin-bottom: 41px;
+        }
+        
+        .other-product {
+            min-width: 288px;
+            height: 56px;
+            opacity: 0.8;
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #292c32;
+            margin-bottom: 28px;
+            margin-top: 28px;
+            margin-right: 41px;
+            margin-left: 41px;
+        }
+        
+        .other-product-img {
+            width: 56px;
+            height: 56px;
+            margin-right: 32px;
+        }
+        
+        .hover-effect:hover {
+            box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.05);
+            /*COLOUR PROPERTY NOT WORKING*/
+        }
+    </style>
+</head>
+
+<body style="background-color: #f8f8f8;">
+
+    <div class="row header">
+        <div class="container-fluid" style="width:77.75%;">
+            <nav class="navbar navbar-expand-sm  ">
+                <a class="nav-link navbar-brand text-white" href=#><img src="logo.svg" style="padding:0px;margin-left: -115px;"></a>
+                <ul class=" navbar-nav float-right" style="position: absolute;right: 0px;margin-right:-115px;">
+                    <li class="nav-item heading">
+                        <a class="nav-link" href=#>Wall Art</a>
+                    </li>
+                    <li class="nav-item heading">
+                        <a class="nav-link" href=#>Men's Sandals</a>
+                    </li>
+                    <li class="nav-item heading">
+                        <a class="nav-link" href=#>Art Supplies</a>
+                    </li>
+                    <li class="nav-item heading">
+                        <a class="nav-link " href=#>Detox Tea</a>
+                    </li>
+                    <li class="nav-item heading">
+                        <a class="nav-link " href=#>Software</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class=" Mask">
+        <img src="bg-banner.png" class="bg-banner">
+        <div class="path">
+            Home > All Categories > Sports > Cycles
+        </div>
+        <div class="divier-top"></div>
+        <div class="product-name">Top 10 Beach Cruisers</div>
+        <div class="row" style="height:41px;margin-left:72px;">
+            <div style="width:189px;">
+                <div class="date">Reviews Scanned</div>
+                <div class="reviews-scanned">13,142</div>
+            </div>
+            <div style="min-width:215px">
+                <div class="date">Updated on</div>
+                <div class="reviews-scanned">April 2019</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" align="center">
+            <div class="col main-content" align="left">
+                <div class="introduction row">A cruiser bicycle, also known as a beach cruiser or (formerly) motobike, is a bicycle that usually combines balloon tires, an upright seating posture, a single-speed drivetrain, and straightforward steel construction with expressive styling.
+                    Cruisers are popular among casual bicyclists and vacationers because they … <a href=# class="read-more d-inline">read more</a>
+                </div>
+                <div class="row main-product">
+                    <div class="badge">
+                        <div><img src="badge-winner.png" class="badge-winner"></div>
+                        <span class="hash d-inline">#</span>
+                        <div class="rank d-block mx-auto">1</div>
+
+                        <div class="winner">WINNER</div>
+                    </div>
+                    <img src="train.bmp" class="product-img">
+                    <div>
+                        <div class="row main-product-name">
+                            Huffy Beach Cruiser Bike, Panama Jack 24-26 inch Single Speed, Lightweight
+                        </div>
+                        <div class="row main-product-description">
+                            A cruiser bicycle, also known as a beach cruiser or (formerly) motobike, is a bicycle that usually combines balloon tires, an upright seating posture, a single-speed...
+                        </div>
+                    </div>
+                    <div class="GaugeMeter" data-percent="65" data-label="Score" data-style="Arch" data-width="4" data-append="" data-size="120"></div>
+                </div>
+                <div class="row main-product">
+                    <div class="badge" style="border-bottom:2px solid #57a3f9;">
+                        <div><img src="badge-winner.png" class="badge-winner" style="visibility: hidden;"></div>
+                        <span class="hash d-inline">#</span>
+                        <div class="rank d-block mx-auto">2</div>
+
+
+                    </div>
+                    <img src="train.bmp" class="product-img">
+                    <div>
+                        <div class="row main-product-name">
+                            Huffy Beach Cruiser Bike, Panama Jack 24-26 inch Single Speed, Lightweight
+                        </div>
+                        <div class="row main-product-description">
+                            A cruiser bicycle, also known as a beach cruiser or (formerly) motobike, is a bicycle that usually combines balloon tires, an upright seating posture, a single-speed...
+                        </div>
+                    </div>
+                    <div class="GaugeMeter" data-percent="65" data-label="Score" data-style="Arch" data-width="4" data-append="" data-size="120"></div>
+                </div>
+                <div class="row main-product">
+                    <div class="badge">
+                        <div><img src="badge-winner.png" class="badge-winner" style="visibility: hidden;"></div>
+                        <span class="hash d-inline">#</span>
+                        <div class="rank d-block mx-auto">3</div>
+                        <div class="best-value">BEST VALUE</div>
+
+                    </div>
+                    <img src="train.bmp" class="product-img">
+                    <div>
+                        <div class="row main-product-name">
+                            Huffy Beach Cruiser Bike, Panama Jack 24-26 inch Single Speed, Lightweight
+                        </div>
+                        <div class="row main-product-description">
+                            A cruiser bicycle, also known as a beach cruiser or (formerly) motobike, is a bicycle that usually combines balloon tires, an upright seating posture, a single-speed...
+                        </div>
+                    </div>
+                    <div class="GaugeMeter" data-percent="65" data-label="Score" data-style="Arch" data-width="4" data-append="" data-size="120"></div>
+                </div>
+                <div class="row main-product" style="border:none;">
+                    <div class="badge">
+                        <div><img src="badge-winner.png" class="badge-winner" style="visibility: hidden;"></div>
+                        <span class="hash d-inline">#</span>
+                        <div class="rank d-block mx-auto">4</div>
+                    </div>
+                    <img src="train.bmp" class="product-img">
+                    <div>
+                        <div class="row main-product-name">
+                            Huffy Beach Cruiser Bike, Panama Jack 24-26 inch Single Speed, Lightweight
+                        </div>
+                        <div class="row main-product-description">
+                            A cruiser bicycle, also known as a beach cruiser or (formerly) motobike, is a bicycle that usually combines balloon tires, an upright seating posture, a single-speed...
+                        </div>
+                    </div>
+                    <div class="GaugeMeter" data-percent="65" data-label="Score" data-style="Arch" data-width="4" data-append="" data-size="120"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color:#ffffff;height:720px;">
+
+        <div class="other-products row d-block" align="center">Other Products</div>
+        <div class="container">
+            <div class="row">
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div class="title_info" style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+                <a href=# class="hover-effect">
+                    <div class="other-product col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                        <img src="p5656.bmp" class="other-product-img">
+                        <div style="max-width:200px;display:inline-block;position:absolute;">Critical Cycles by Westridge Chatham Women's Single Speed Beach Cruiser
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <script src="http://dev.bestviewsreviews.com/wp-content/themes/BVR/js/GaugeMeter.js">
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".GaugeMeter").gaugeMeter();
+
+                // $(".hover-effect").mouseover(function() {
+                //     $(".title_info").css("color", "#57a3f9");
+                // });
+
+                // $(".hover-effect").mouseout(function() {
+                //     $(".title_info").css("color", "");
+                // });
+
+
+            });
+        </script>
+</body>
+
+</html>
